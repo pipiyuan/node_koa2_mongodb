@@ -3,9 +3,9 @@ const Books = require('../../db/config.js').qidian.books;
 
 let booklist = async (ctx, next) => {
     let query = ctx.query;
-    let size = query.size*1;
-    let type = query.type;
-    let lastId = query.lastId*1;
+    let size = query.size*1 || 5;
+    let type = query.type || 'slide';
+    let lastId = query.lastId*1 || 0;
     let data = {};
 
     data.booklist = await Booklist.find({id: {$gt: lastId}}).sort({KEY:1}).limit(size);
