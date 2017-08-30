@@ -13,6 +13,35 @@ $ npm run dev           // 测试开发
 $ npm start             // 生成环境
 ```
 ## 项目结构
+```
+├── app.js 					// 入口文件  
+├── aviews  
+│   ├── nunjucks_config.js 	// nunjuck模板引擎配置文件  
+│   └── pages				// html模板页面文件夹
+│       ├── hello.html  
+│       └── index.html  
+├── config 					// 运行环境配置			
+│   ├── development.js
+│   ├── index.js
+│   └── production.js
+├── controllers 			// 关于 api 接口文件夹
+│   ├── config.js 			// api 接口配置文件
+│   └── modes 				// 模块的 api 接口
+│       ├── qidian_api.js 	  
+│       └── test_api.js 	  
+├── db 						// 关于 db 文件夹
+│   ├── config.js 			// mongoose 的配置文件
+│   ├── db.js 				// db 配置文件 
+│   ├── qidian 				// 模块（数据库db）的 schema 配置文件
+│   │   ├── booklist.js
+│   │   └── books.js
+│   └── test
+│       └── userInfo.js
+├── package-lock.json
+├── package.json
+├── pm2_config.json 		// pm2的配置文件
+└── readme.md  
+```
 
 ## 接口说明
 
