@@ -13,17 +13,18 @@ usage: use db_name, db.createuser({
         }
     ]
 })*/
+const config = require('../config')
 const db_config = {
     qidian: {       // database_name
-        ip: '120.77.81.108',
-        port: '27017',
+        ip: config.mongo.ip,
+        port: config.mongo.port,
         database: 'qidian',
         username: 'Test',
         password: '101010',
     },
     test: {         // database_name
-        ip: '120.77.81.108',
-        port: '27017',
+        ip: config.mongo.ip,
+        port: config.mongo.port,
         database: 'test',
         username: 'Test',
         password: '101010',

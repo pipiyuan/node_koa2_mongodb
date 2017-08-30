@@ -1,4 +1,4 @@
-const UserInfo = require('../../mongodb/config.js').test.userInfo;
+const UserInfo = require('../../db/config.js').test.userInfo;
 const nunjucks = require('../../views/nunjucks_config.js');
 
 // userInfo.create({
@@ -24,7 +24,6 @@ var fn_hello = async(ctx, next) => {
 var fn_signin = async (ctx, next) => {
     let name = ctx.request.body.name || '';
     let password = ctx.request.body.password || '';
-    console.log(`signin with name: ${name}, password: ${password}`);
     if (name === 'koa' && password === '12345') {
         ctx.response.body = `<h1>Welcome, ${name}!</h1>`;
     } else {

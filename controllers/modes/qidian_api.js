@@ -1,5 +1,5 @@
-const Booklist = require('../../mongodb/config.js').qidian.booklist;
-const Books = require('../../mongodb/config.js').qidian.books;
+const Booklist = require('../../db/config.js').qidian.booklist;
+const Books = require('../../db/config.js').qidian.books;
 
 let booklist = async (ctx, next) => {
     let query = ctx.query;

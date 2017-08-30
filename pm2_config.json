@@ -1,0 +1,41 @@
+{
+  "apps": [
+        {
+            // Application #1
+            "name": "node_mongo",       // 应用名称
+            "script": "app.js",         // 实际启动脚本
+            // "args": ["--toto=heya coco", "-d", "1"],    //提供参数                    
+            "watch": true,                              //文件更改时，它将重新启动应用
+            // "node_args": "--harmony",                //发送给节点的参数
+            // "merge_logs": true,                         //同一应用程序的所有实例的日志合并到同一个文件中
+            "log_date_format"  : "YYYY-MM-DD HH:mm Z",
+            "cwd": "./",
+            "error_file": "/home/pp/logs/node/err.log",
+            "out_file": "/home/pp/logs/node/normal.log",
+            // "env":
+            // {
+            //     "NODE_ENV": "development",
+            //     "AWESOME_SERVICE_API_TOKEN": "xxx"
+            // },
+            // "env_production":
+            // {
+            //     "NODE_ENV": "production"
+            // },
+            // "env_staging":
+            // {
+            //     "NODE_ENV": "staging",
+            //     "TEST": true
+            // }
+        },
+        // {
+        //     // Application #2
+        //     "name": "api-app",
+        //     "script": "api.js",
+        //     "instances": 4,
+        //     "exec_mode": "cluster_mode",
+        //     "error_file": "./examples/child-err.log",
+        //     "out_file": "./examples/child-out.log",
+        //     "pid_file": "./examples/child.pid"
+        // }
+    ]
+}

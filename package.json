@@ -4,14 +4,17 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node-dev app"
+    "dev": "node-dev app",
+    "start": "pm2 restart pm2_config.json"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.5.0",
     "glob": "^7.1.2",
     "koa": "^2.2.0",
     "koa-bodyparser": "^4.2.0",
+    "koa-cors": "0.0.16",
     "koa-router": "^7.2.0",
     "mongoose": "^4.11.6",
     "node-uuid": "^1.4.8",

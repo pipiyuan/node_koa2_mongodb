@@ -1,17 +1,22 @@
 const Koa = require('koa');
-
+const Cors = require('koa-cors');
 // 注意require('koa-router')返回的是函数:
 const router = require('koa-router')();
 // koa-bodyparser 解析原始request请求，然后，把解析后的参数，绑定到ctx.request.body中
 const bodyParser = require('koa-bodyparser');
+// 导入配置文件
+const config = require('./config/index.js');
 // 导入controller middleware:
 const controllers = require('./controllers/config.js');
 
 const app = new Koa();
-
+const corsOptions = {
+  // origin: '*'
+};
+// 通过koa-cors 设置跨域请求
+app.use(Cors(corsOptions));
 // log request URL:
 app.use(async (ctx, next) => {
-    console.log(`Process ${ctx.request.method} ${ctx.request.url}...`);
     await next();
 });
 
@@ -22,5 +27,5 @@ app.use(bodyParser());
 app.use(controllers(router));
 
 // 在端口3000监听:
-app.listen(3000);
-console.log('app started at port 3000...');
+app.listen(config.port);
+console.log(`app started at port ${config.port}`);
