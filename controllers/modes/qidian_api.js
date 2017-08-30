@@ -9,7 +9,7 @@ let booklist = async (ctx, next) => {
     let data = {};
 
     data.booklist = await Booklist.find({id: {$gt: lastId}}).sort({KEY:1}).limit(size);
-    data.lastId = lastId;
+    data.lastId = data.booklist[data.booklist.length-1].id;
     ctx.response.body = data;
 };
 
