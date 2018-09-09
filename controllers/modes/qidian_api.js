@@ -38,8 +38,8 @@ let bookChapter = async (ctx, next) => {
 };
 
 module.exports = {
-    'GET/booklist': booklist,
-    'GET/book/:id': books,
-    'GET/book/chapter/:id': chapters,
-    'GET/book/:id/:chapter': bookChapter,
+    'GET/qidian/booklist': booklist,
+    'GET/qidian/book/:id': books,
+    'GET/qidian/book/chapter/:id': chapters,
+    'GET/qidian/book/:id/:chapter': bookChapter,
 };
