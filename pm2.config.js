@@ -4,7 +4,7 @@ module.exports = {
             "name": "reader-node",       // 应用名称
             "script": "app.js",         // 实际启动脚本 
             "instances": 1,                        // 进程数据
-            "watch": true,                              //文件更改时，它将重新启动应用
+            "watch": false,                              //(Boolen|Array)文件更改时，它将重新启动应用
             "exec_mode" : "fork", // 可选:fork(服务器单核推荐) cluster(多核推荐)
             // "node_args": "--harmony",                //发送给节点的参数
             // "merge_logs": true,                         //同一应用程序的所有实例的日志合并到同一个文件中
